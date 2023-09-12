@@ -5,16 +5,17 @@
 }
 
 .headerContent{
-    color: rgb(21, 19, 19);
-    padding: 10px;
-    margin-top: 25px;
+    color: rgb(30, 18, 18);
+    padding: 5px;
+    margin-top: 50px;
     margin-right: 20px;
-    /* font-weight: bold; */
+    font-size: 18px;
 }
 
 .headerContent:hover{
-    text-decoration: underline;
-    padding-bottom: 2px;
+    /* text-decoration: underline;
+    padding-bottom: 2px; */
+    color: black;
     transform: translate(0px,-3px);
     transition-duration: 0.5s;
 }
