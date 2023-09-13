@@ -1,5 +1,6 @@
 .main{
     height: 1000px;
+    overflow: hidden;
 }
 
 .main-text{
@@ -27,9 +28,17 @@
     font-weight: bold;
 }
 
+.main-subtext:hover{
+    left: 300px;
+    color: black;
+    font-size: 30px;
+    transition-duration: 1s;
+    background-color: rgb(99, 73, 73,0.8);
+}
+
 .main-link{
     position: relative;
-    left: 220px;
+    left: 230px;
     top: 240px;
     color: rgb(30, 18, 18);
     text-decoration: none;
