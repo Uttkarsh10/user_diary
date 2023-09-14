@@ -6,6 +6,7 @@ function Header(props) {
   const [data, setData] = useState(false);
 
   const addEvent = () => {
+    props.change();
     setData(!data);
   }
 

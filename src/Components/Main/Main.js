@@ -5,6 +5,7 @@ import Footer from '../Layout/Footer'
 import diaryImage from '../../Images/diary-1.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight} from '@fortawesome/free-solid-svg-icons'
+import DiaryEntry from '../Diary/DiaryEntry';
 
 function Main() {
   const [data,setData] = useState(false);
@@ -15,7 +16,7 @@ function Main() {
 
   return (
     <div style={{backgroundImage : `url(${diaryImage})`, backgroundRepeat : "no-repeat", backgroundSize : "cover"}} className={styles.main}>
-        <Header/>
+        <Header change = {AddEntry}/>
 
         {!data && 
           <div>
@@ -26,6 +27,8 @@ function Main() {
             <div className={styles['main-link']} onClick={AddEntry}>Get Started <FontAwesomeIcon icon={faArrowRight} /></div>
           </div>
         }
+
+        {data && <DiaryEntry/>}
 
         <Footer />
     </div>
