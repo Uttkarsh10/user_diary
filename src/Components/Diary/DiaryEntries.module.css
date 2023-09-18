@@ -1,0 +1,27 @@
+.block{
+
+}
+
+.date{
+    text-align: left;
+    margin-left: 25px;
+}
+
+.EntryBlock{
+    width: 900px;
+    height: 200px;
+    margin: 25px;
+    margin-left: 270px;
+    background-color:  rgba(237, 228, 228, 0.6);
+    color: black;
+}
+
+.blockButton{
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    text-align: left;
+    margin-left: 15px;
+}
