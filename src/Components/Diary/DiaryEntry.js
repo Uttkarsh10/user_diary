@@ -21,7 +21,7 @@ function DiaryEntry() {
             {/* <input type='text' placeholder='Add Content here'/> */}
             <div className={styles.text}>
                 <div style={{marginRight:'15px',fontSize:'20px'}} onClick = {clickHandler}>Save</div>
-                <div style={{fontSize:'20px'}}>Cancel</div>
+                <div style={{fontSize:'20px'}} onClick = {clickHandler}>Cancel</div>
             </div>
         </Modal>}
 
