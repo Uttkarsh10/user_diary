@@ -6,7 +6,7 @@ import diaryImage from '../../Images/diary-1.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight} from '@fortawesome/free-solid-svg-icons'
 import DiaryEntry from '../Diary/DiaryEntry';
-import { useDispatch, useSelector } from 'react-redux';
+import { batch, useDispatch, useSelector } from 'react-redux';
 import { entrydisplayActions } from '../../store/entrydisplay-slice';
 
 function Main() {
@@ -15,7 +15,9 @@ function Main() {
   const showEntry = useSelector(state => state.entrydisplay.show);
 
   const AddEntry = () => {
-    dispatch(entrydisplayActions.toggle());
+    batch(()=>{
+      dispatch(entrydisplayActions.toggle());
+    })
     // setData(!data);
   }
 
