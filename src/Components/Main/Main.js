@@ -5,8 +5,10 @@ import Footer from '../Layout/Footer'
 import diaryImage from '../../Images/diary-1.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight} from '@fortawesome/free-solid-svg-icons'
+
 import DiaryEntry from '../Diary/DiaryEntry';
-import { batch, useDispatch, useSelector } from 'react-redux';
+
+import {useDispatch, useSelector } from 'react-redux';
 import { entrydisplayActions } from '../../store/entrydisplay-slice';
 
 function Main() {
@@ -15,11 +17,11 @@ function Main() {
   const showEntry = useSelector(state => state.entrydisplay.show);
 
   const AddEntry = () => {
-    batch(()=>{
-      dispatch(entrydisplayActions.toggle());
-    })
+    dispatch(entrydisplayActions.toggle());
     // setData(!data);
   }
+
+
 
   return (
     <div style={{backgroundImage : `url(${diaryImage})`, backgroundRepeat : "no-repeat", backgroundSize : "cover"}} className={styles.main}>

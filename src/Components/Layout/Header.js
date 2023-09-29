@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './Header.module.css';
 import DiaryEntry from '../Diary/DiaryEntry';
-import { batch, useDispatch, useSelector } from 'react-redux';
+import {useDispatch, useSelector } from 'react-redux';
 import { entrydisplayActions } from '../../store/entrydisplay-slice';
 
 function Header(props) {
@@ -10,13 +10,12 @@ function Header(props) {
   const showEntry = useSelector(state => state.entrydisplay.show);
 
   const addEvent = () => {
-    batch(()=>{
-      dispatch(entrydisplayActions.toggle());
-    })
+    dispatch(entrydisplayActions.toggle());
     // props.change();
     // setData(!data);
   }
 
+  console.log(showEntry);
   return (
     <div>
       {showEntry && <DiaryEntry/>}
