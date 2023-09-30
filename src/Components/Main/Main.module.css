@@ -1,6 +1,11 @@
 .main{
-    height: 1000px;
+    /* height: 1000px; */
     overflow: hidden;
+    /* min-height: 100vh;
+    position: relative; */
+    display: flex;
+  flex-direction: column;
+  min-height: 120vh; 
 }
 
 .main-text{
@@ -49,3 +54,4 @@
     color: black;
     transition-duration: 0.5s;
 }
+

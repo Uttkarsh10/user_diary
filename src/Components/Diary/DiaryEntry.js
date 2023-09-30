@@ -8,7 +8,7 @@ function DiaryEntry() {
 
   useEffect(() => {
     console.log("Hey");
-  })
+  },[])
   
 
   const clickHandler = () => {
