@@ -1,19 +1,18 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState} from 'react'
 import Modal from '../UI/Modal'
 import styles from './DiaryEntry.module.css'
-// import DiaryEntries from './DiaryEntries'
+// import { useSelector } from 'react-redux';
+import DiaryEntries from './DiaryEntries'
 
 function DiaryEntry() {
   const [state1,setState] = useState(true);
 
-  useEffect(() => {
-    console.log("Hey");
-  },[])
-  
-
   const clickHandler = () => {
+    console.log("click handler = " + state1);
     setState(!state1);
   }
+
+  console.log("state 1 = " + state1);
 
 
   return (
@@ -26,7 +25,7 @@ function DiaryEntry() {
             <div className={styles.content}>Content:</div>
             <textarea type='text' rows='15' cols='47' placeholder='Add Content here' className={styles.input} style={{padding:'10px'}}/>
             <div className={styles.text}>
-                <div style={{marginRight:'15px',fontSize:'20px'}}>
+                <div style={{marginRight:'15px',fontSize:'20px'}} onClick = {clickHandler}>
                   Save
                 </div>
                 <div style={{fontSize:'20px'}} onClick = {clickHandler}>
@@ -36,7 +35,8 @@ function DiaryEntry() {
         </Modal>
       }
 
-        {!state1 && <p>You have no entries....</p>} 
+      {/* {!state1 && <p>You have no entries....</p>}  */}
+      {!state1 && <DiaryEntries/>}
     </div>
   )
 }
