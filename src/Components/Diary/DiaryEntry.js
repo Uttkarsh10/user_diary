@@ -8,12 +8,8 @@ function DiaryEntry() {
   const [state1,setState] = useState(true);
 
   const clickHandler = () => {
-    console.log("click handler = " + state1);
     setState(!state1);
   }
-
-  console.log("state 1 = " + state1);
-
 
   return (
     <div>
