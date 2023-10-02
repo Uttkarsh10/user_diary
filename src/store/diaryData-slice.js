@@ -4,8 +4,13 @@ const diaryDataSlice = createSlice({
     name : 'diaryData',
     initialState : {data : []},
     reducers : {
-        addData(state,entry){
-            state.data = state.data.push(entry);
+        addData(state,action){
+            const newEntry = action.payload;
+            state.data.push({
+                title : newEntry.title,
+                content : newEntry.content,
+                date : newEntry.date
+            });
         },
 
         deleteData(state,id){
