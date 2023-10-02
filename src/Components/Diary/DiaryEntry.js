@@ -11,6 +11,11 @@ function DiaryEntry() {
     setState(!state1);
   }
 
+  const saveHandler = () => {
+    console.log("Sa");
+    setState(!state1);
+  }
+
   return (
     <div>
       {state1 && 
@@ -21,7 +26,7 @@ function DiaryEntry() {
             <div className={styles.content}>Content:</div>
             <textarea type='text' rows='15' cols='47' placeholder='Add Content here' className={styles.input} style={{padding:'10px'}}/>
             <div className={styles.text}>
-                <div style={{marginRight:'15px',fontSize:'20px'}} onClick = {clickHandler}>
+                <div style={{marginRight:'15px',fontSize:'20px'}} onClick = {saveHandler}>
                   Save
                 </div>
                 <div style={{fontSize:'20px'}} onClick = {clickHandler}>
