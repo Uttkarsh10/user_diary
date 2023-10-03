@@ -20,8 +20,9 @@ function DiaryEntry() {
     const title = titleRef.current.value;
     const content = contentRef.current.value;
     const date = new Date();
+    const id = Math.random();
 
-    const newEntry = {title : title, content : content, date: date};
+    const newEntry = {id:id, title : title, content : content, date: date};
     dispatch(diaryDataActions.addData(newEntry));
     setState(!state1);
   }

@@ -7,14 +7,16 @@ const diaryDataSlice = createSlice({
         addData(state,action){
             const newEntry = action.payload;
             state.data.push({
+                id : newEntry.id,
                 title : newEntry.title,
                 content : newEntry.content,
                 date : newEntry.date
             });
         },
 
-        deleteData(state,id){
-            state.data = state.data.filter((item) => item.id!==id);
+        deleteData(state,action){
+            const id = action.id;
+            state.data.filter((item) => item.id!==id);
         }
     },
 })

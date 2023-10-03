@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './DiaryEntries.module.css'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { diaryDataActions } from '../../store/diaryData-slice';
 
 // const dummy_Data = [
 //     {
@@ -25,6 +26,11 @@ import { useSelector } from 'react-redux';
 function DiaryEntries() {
 
     const Diary_Data = useSelector(state => state.diaryData.data);
+    const dispatch = useDispatch();
+
+    const deleteHandler = (id) => {
+        dispatch(diaryDataActions.deleteData(id)); 
+    }
 
   return (
     <div className={styles.block}>
@@ -38,7 +44,7 @@ function DiaryEntries() {
 
                 <div className={styles.blockButton}>
                     <div style={{marginRight:'10px'}}>Edit</div>
-                    <div>Delete</div>
+                    <div onClick={() => deleteHandler(id)}>Delete</div>
                 </div>
             </div>
         ))}
