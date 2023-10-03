@@ -1,7 +1,8 @@
 import React from 'react'
 import styles from './DiaryEntries.module.css'
-import { useDispatch, useSelector } from 'react-redux';
-import { diaryDataActions } from '../../store/diaryData-slice';
+import { useSelector } from 'react-redux';
+
+import Entry from './Entry';
 
 // const dummy_Data = [
 //     {
@@ -26,27 +27,32 @@ import { diaryDataActions } from '../../store/diaryData-slice';
 function DiaryEntries() {
 
     const Diary_Data = useSelector(state => state.diaryData.data);
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
 
-    const deleteHandler = (id) => {
-        dispatch(diaryDataActions.deleteData(id)); 
-    }
+    // const deleteHandler = () => {
+    //     dispatch(diaryDataActions.deleteData(id)); 
+    // }
 
   return (
     <div className={styles.block}>
         {Diary_Data.map((item) => (
         // {dummy_Data.map((item) => (
-            <div className={styles.EntryBlock}>
-                <div className={styles.date}>{item.date.toDateString()}</div>
-                <hr style={{width:'850px'}}/>
-                <div style={{textAlign:"left", marginLeft:"25px"}}>{item.title}</div>
-                <div style={{textAlign:"left", marginLeft:"25px"}}>{item.content}</div>
+            // <div className={styles.EntryBlock}>
+            //     {key = item.id}
+            //     <div className={styles.date}>{item.date.toDateString()}</div>
+            //     <hr style={{width:'850px'}}/>
+            //     <div style={{textAlign:"left", marginLeft:"25px"}}>{item.title}</div>
+            //     <div style={{textAlign:"left", marginLeft:"25px"}}>{item.content}</div>
 
-                <div className={styles.blockButton}>
-                    <div style={{marginRight:'10px'}}>Edit</div>
-                    <div onClick={() => deleteHandler(id)}>Delete</div>
-                </div>
-            </div>
+            //     <div className={styles.blockButton}>
+            //         <div style={{marginRight:'10px'}}>Edit</div>
+            //         <div onClick={deleteHandler}>Delete</div>
+            //     </div>
+            // </div>
+            <Entry 
+                key={item.id} 
+                item={{ id: item.id, title: item.title, content:item.content, date: item.date }}
+            />
         ))}
     </div>
   )

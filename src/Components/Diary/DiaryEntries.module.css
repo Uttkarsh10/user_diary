@@ -2,37 +2,3 @@
     margin-top: 25px;
 }
 
-.date{
-    text-align: left;
-    margin-left: 25px;
-    padding-top: 10px;
-}
-
-.EntryBlock{
-    margin: 0 auto;
-    width: 900px;
-    height: 200px;
-    /* margin: 25px; */
-    /* margin-left: 270px; */
-    margin-bottom: 25px;
-    background-color:  rgba(237, 228, 228, 0.6);
-    color: black;
-    border-radius: 15px;
-}
-
-.EntryBlock:hover{
-    background-color: rgba(237, 228, 228, 0.8);
-    width: 950px;
-    height: 210px;
-    transition-duration: 0.5s;
-}
-
-.blockButton{
-    position: relative;
-    bottom: 0px;
-    display: flex;
-    flex-direction: row;
-    padding: 10px;
-    text-align: left;
-    margin-left: 15px;
-}

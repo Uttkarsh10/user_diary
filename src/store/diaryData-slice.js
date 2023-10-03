@@ -15,8 +15,8 @@ const diaryDataSlice = createSlice({
         },
 
         deleteData(state,action){
-            const id = action.id;
-            state.data.filter((item) => item.id!==id);
+            const id = action.payload;
+            state.data = state.data.filter((item) => item.id!==id);
         }
     },
 })

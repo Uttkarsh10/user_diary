@@ -3,7 +3,7 @@ import Modal from '../UI/Modal'
 import styles from './DiaryEntry.module.css'
 // import { useSelector } from 'react-redux';
 import DiaryEntries from './DiaryEntries'
-import { useDispatch } from 'react-redux';
+import { useDispatch} from 'react-redux';
 import { diaryDataActions } from '../../store/diaryData-slice';
 
 function DiaryEntry() {
@@ -22,7 +22,8 @@ function DiaryEntry() {
     const date = new Date();
     const id = Math.random();
 
-    const newEntry = {id:id, title : title, content : content, date: date};
+    // const newEntry = {id:id, title : title, content : content, date: date};
+    const newEntry = {id:id, title : title, content : content, date : date.toDateString()};
     dispatch(diaryDataActions.addData(newEntry));
     setState(!state1);
   }
