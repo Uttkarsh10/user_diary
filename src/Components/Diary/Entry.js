@@ -11,6 +11,10 @@ function Entry(props) {
         dispatch(diaryDataActions.deleteData(props.item.id));
     }
 
+    const editHandler = () => {
+      dispatch(diaryDataActions.editData(props.item.id));
+    }
+
   return (
     <div className={styles.EntryBlock}>
         <div className={styles.date}>{props.item.date}</div>
@@ -19,7 +23,7 @@ function Entry(props) {
         <div style={{textAlign:"left", marginLeft:"25px"}}>{props.item.content}</div>
 
         <div className={styles.blockButton}>
-            <div style={{marginRight:'10px'}}>Edit</div>
+            <div style={{marginRight:'10px'}} onClick={editHandler}>Edit</div>
             <div onClick={deleteHandler}>Delete</div>
         </div>
     </div>
