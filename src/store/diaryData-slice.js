@@ -9,7 +9,7 @@ const diaryDataSlice = createSlice({
             state.data.push({
                 id : newEntry.id,
                 title : newEntry.title,
-                content : newEntry.content,
+                content : newEntry.content, 
                 date : newEntry.date
             });
         },
@@ -17,6 +17,10 @@ const diaryDataSlice = createSlice({
         deleteData(state,action){
             const id = action.payload;
             state.data = state.data.filter((item) => item.id!==id);
+        },
+
+        editData(state){
+            
         }
     },
 })
