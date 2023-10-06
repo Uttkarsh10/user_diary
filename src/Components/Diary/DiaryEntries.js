@@ -7,7 +7,6 @@ import Entry from './Entry';
 function DiaryEntries() {
 
     const Diary_Data = useSelector(state => state.diaryData.data);
-    if(Diary_Data.s)
 
   return (
     <div className={styles.block}>
