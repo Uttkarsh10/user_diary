@@ -16,10 +16,11 @@ function DiaryEntry(props) {
   if(hasProp){
     const title1 = props.item.title;
     const content1 = props.item.content;
+    const [editTitle, setEditedTitle] = useState(null);
+  const [editContent, setEditedContent] = useState(null);
   }
 
-  const [editTitle, setEditedTitle] = useState(null);
-  const [editContent, setEditedContent] = useState(null);
+  
 
   // const [editDate, setEditedDate] = useState(date1);
 
