@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import DiaryEntry from "../Components/Diary/DiaryEntry";
+import EditEntry from "../Components/Diary/EditEntry";
 
 const diaryDataSlice = createSlice({
     name : 'diaryData',
@@ -22,7 +23,9 @@ const diaryDataSlice = createSlice({
 
         editData(state,action){
             const id = action.payload;
-            <DiaryEntry item={{date: state.data.date, title: state.data[id].title, content: state.data[id].content}}/>
+            // <DiaryEntry item={{date: state.data.date, title: state.data[id].title, content: state.data[id].content}}/>
+            <EditEntry/>
+
         }
     },
 })

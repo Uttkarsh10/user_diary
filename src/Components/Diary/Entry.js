@@ -13,6 +13,7 @@ function Entry(props) {
 
     const editHandler = () => {
       dispatch(diaryDataActions.editData(props.item.id));
+      console.log("Edit Handler")
     }
 
   return (
