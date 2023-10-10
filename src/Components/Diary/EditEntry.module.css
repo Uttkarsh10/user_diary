@@ -1,0 +1,24 @@
+.input{
+    border-radius: 8px;
+    border: none;
+    background-color: rgb(237, 222, 222,0.8);
+    padding: 8px;
+}
+
+
+.title{
+    margin-bottom:5px;
+    font-size: 20px;
+}
+
+.content{
+    margin-bottom: 5px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.text{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
