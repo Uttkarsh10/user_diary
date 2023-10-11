@@ -5,20 +5,14 @@ import {useDispatch} from 'react-redux';
 import { entrydisplayActions } from '../../store/entrydisplay-slice';
 
 function Header(props) {
-  //  const [data, setData] = useState(false);
   const dispatch = useDispatch();
-  // const showEntry = useSelector(state => state.entrydisplay.show);
 
   const addEvent = () => {
     dispatch(entrydisplayActions.toggle());
-    // props.change();
-    // setData(!data);
   }
-
   
   return (
     <div>
-      {/* {showEntry && <DiaryEntry/>} */}
       <div className={styles.header}>
         <div className={styles.headerContent}>Home</div>
         <div className={styles.headerContent} onClick={addEvent}>Add entry</div>
