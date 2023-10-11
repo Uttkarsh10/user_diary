@@ -6,6 +6,8 @@ import { editdisplayActions } from '../../store/editdisplay-slice';
 
 function Entry(props) {
 
+  console.log("Entry");
+
     const dispatch = useDispatch();
 
     const deleteHandler = () => {

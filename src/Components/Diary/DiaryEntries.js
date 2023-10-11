@@ -6,7 +6,10 @@ import Entry from './Entry';
 
 function DiaryEntries() {
 
+  console.log("Diary Entries");
+
     const Diary_Data = useSelector(state => state.diaryData.data);
+    console.log(Diary_Data);
 
   return (
     <div className={styles.block}>

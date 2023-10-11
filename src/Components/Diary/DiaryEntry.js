@@ -9,6 +9,8 @@ import EditEntry from './EditEntry';
 
 function DiaryEntry() {
 
+  console.log("Diary Entry");
+
   const [state1,setState] = useState(true);
   const titleRef = useRef();
   const contentRef = useRef();
